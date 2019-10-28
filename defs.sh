@@ -96,7 +96,46 @@ HOST_ALIAS["controller"]="kibana/cerebro/jmeter"
 
 declare -A HOST_IP
 
-HOST_IP["admin-ap"]=""
+HOST_IP["gateway"]="192.168.0.1"
+HOST_IP["admin-ap"]="192.168.168.2"
+HOST_IP["cloud-ap"]="192.168.168."
+HOST_IP["desktop-ap"]="192.168.168."
+HOST_IP["bedroom-ap"]="192.168.168."
+HOST_IP["den-ap"]="192.168.168."
+
+HOST_IP["nvr"]="192.168.168."
+HOST_IP["bluray"]="192.168.168."
+HOST_IP["samsung-tv"]="192.168.168."
+HOST_IP["bedroom-av"]="192.168.168."
+HOST_IP["amy-wireless"]="192.168.168."
+HOST_IP["amy"]="192.168.168."
+HOST_IP["amanda-cell"]="192.168.168."
+HOST_IP["sfloess-cell"]="192.168.168."
+HOST_IP["amanda-tablet"]="192.168.168."
+HOST_IP["tablet-01"]="192.168.168."
+HOST_IP["tablet-02"]="192.168.168."
+HOST_IP["laptop-01"]="192.168.168."
+HOST_IP["cloud-server"]="192.168.168."
+HOST_IP["cloud-host-01"]="192.168.168."
+HOST_IP["cloud-host-02"]="192.168.168."
+
+HOST_IP["polycom"]="192.168.168."
+HOST_IP["redhat-laptop"]="192.168.168."
+HOST_IP["redhat-laptop-wireless"]="192.168.168."
+
+HOST_IP["workstation"]="192.168.168."
+HOST_IP["pi-01"]="192.168.168."
+HOST_IP["pi-02"]="192.168.168."
+HOST_IP["debian"]="192.168.168."
+
+HOST_IP["redhat-server-01"]="192.168.168."
+HOST_IP["redhat-server-02"]="192.168.168."
+HOST_IP["redhat-server-03"]="192.168.168."
+HOST_IP["redhat-server-04"]="192.168.168."
+HOST_IP["redhat-test"]="192.168.168."
+
+HOST_IP["jenkins-slave"]="192.168.168."
+HOST_IP["controller"]="192.168.168."
 
 # --------------------------------------------------------------
 # Host MAC addresses

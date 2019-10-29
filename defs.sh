@@ -143,7 +143,86 @@ HOST_IP["controller"]="192.168.168."
 
 declare -A HOST_MAC
 
-HOST_MAC["admin-ap"]=""
+HOST_MAC["gateway"]=""
+HOST_MAC["admin-ap"]="x2"
+HOST_MAC["cloud-ap"]=""
+HOST_MAC["desktop-ap"]=""
+HOST_MAC["bedroom-ap"]=""
+HOST_MAC["den-ap"]=""
+
+HOST_MAC["nvr"]=""
+HOST_MAC["bluray"]=""
+HOST_MAC["samsung-tv"]=""
+HOST_MAC["bedroom-av"]=""
+HOST_MAC["amy-wireless"]=""
+HOST_MAC["amy"]=""
+HOST_MAC["amanda-cell"]=""
+HOST_MAC["sfloess-cell"]=""
+HOST_MAC["amanda-tablet"]=""
+HOST_MAC["tablet-01"]=""
+HOST_MAC["tablet-02"]=""
+HOST_MAC["laptop-01"]=""
+HOST_MAC["cloud-server"]=""
+HOST_MAC["cloud-host-01"]=""
+HOST_MAC["cloud-host-02"]=""
+
+HOST_MAC["polycom"]=""
+HOST_MAC["redhat-laptop"]=""
+HOST_MAC["redhat-laptop-wireless"]=""
+
+HOST_MAC["workstation"]=""
+HOST_MAC["pi-01"]=""
+HOST_MAC["pi-02"]=""
+HOST_MAC["debian"]=""
+
+HOST_MAC["redhat-server-01"]=""
+HOST_MAC["redhat-server-02"]=""
+HOST_MAC["redhat-server-03"]=""
+HOST_MAC["redhat-server-04"]=""
+HOST_MAC["redhat-test"]=""
+
+HOST_MAC["jenkins-slave"]=""
+HOST_MAC["controller"]=""
+
+# --------------------------------------------------------------
+# Various servers
+# --------------------------------------------------------------
+
+GATEWAY_IP=${HOST_IP["admin-ap"]}
+NTP_IP=${HOST_IP["admin-ap"]}
+TFP_IP=${HOST_IP["cloud-server"]}
+TFP_HOST=${HOST["cloud-server"]}
+
+DOMAIN_NAME="flossware.com"
+
+# --------------------------------------------------------------
+# DHCP options
+# --------------------------------------------------------------
+
+DHCP_OPTION_GATEWAY=3
+DHCP_OPTION_DOMAIM=40
+DHCP_OPTION_NTP=42
+DHCP_OPTION_TFP=66
+
+declare -A DHCP_OPTION
+
+DHCP_OPTION[${DHCP_OPTION_GATEWAY}]=${GATEWAY_IP}
+DHCP_OPTION[${DHCP_OPTION_DOMAIN}]=${DOMAIN_NAME}
+DHCP_OPTION[${DHCP_OPTION_NTP}]=${NTP_IP}
+DHCP_OPTION[${DHCP_OPTION_TFP}]=${TFTP_IP}
+
+# --------------------------------------------------------------
+# DHCP items
+# --------------------------------------------------------------
+
+declare -A DHCP_ITEM
+
+DHCP_ITEM["dhcp-range"]="192.168.168.150,192.168.168.253,255.255.255.0,3600s"
+DHCP_ITEM["dhcp-boot"]="pxelinux.0,${TFTP_HOST},${TFTP_IP}"
+DHCP_ITEM["dhcp-authoritative"]=""
+DHCP_ITEM["expand-hosts"]=""
+DHCP_ITEM["log-queries"]=""
+DHCP_ITEM["log-dhcp"]=""
 
 # --------------------------------------------------------------
 # Host dir where things are run and installed to/from.

@@ -258,4 +258,12 @@ HOST_HARDWARE["bedroom-ap"]="${ARMEL_HOST}"
 HOST_HARDWARE["cloud-server"]="${AMRV5_TEL_HOST}"
 
 # --------------------------------------------------------------
+# The /etc/init.d startup/shutdown scripts
+# --------------------------------------------------------------
+
+declare -A HOST_INIT
+
+HOST_INIT["bedroom-ap"]="rsyslog ntp cron rpcbind postfix nis ssh"
+
+# --------------------------------------------------------------
 

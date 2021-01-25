@@ -1,9 +1,24 @@
 # .bashrc
 
+# ----------------------------------------------------------------------
 
-if [ -f /etc/bash_completion ]; then
-        . /etc/bash_completion
+# Source global definitions
+if [ -f /etc/bashrc ]
+then
+    . /etc/bashrc
 fi
+
+# ----------------------------------------------------------------------
+
+if [ -f /etc/bash_completion ]
+then
+    . /etc/bash_completion
+fi
+
+# ----------------------------------------------------------------------
+
+export BIN_HOME=${HOME}/Bin
+export CONFIG_HOME=${HOME}/Config
 
 # ----------------------------------------------------------------------
 
@@ -11,7 +26,7 @@ export OS_NAME=`lsb_release -i | cut -f 2 -d ':' | tr -d '\t'`
 export OS_RELEASE_NAME=`lsb_release -c | cut -f 2 -d ':' | tr -d '\t'`
 export OS_VERSION=`lsb_release -r | cut -f 2 -d ':' | tr -d '\t'`
 
-export BIN_DIR=/root/Bin
+export BIN_DIR=${HOME}/Bin
 export HOST_DIR=${BIN_DIR}/Host
 export DOMAIN_DIR=${BIN_DIR}/Domain
 export OS_DIR=${BIN_DIR}/OperatingSystem
@@ -29,7 +44,8 @@ export ROOT_PATH=${HOSTNAME_DIR}:${MISC_HOST_DIR}:${DOMAINNAME_DIR}:${RELEASE_DI
 # ----------------------------------------------------------------------
 
 export GOPATH=${HOME}/gopath
-export PATH=${GOPATH}:${GOPATH}/bin:${PATH}
+
+export PATH=${GOPATH}:${GOPATH}/bin:${BIN_HOME}:${ROOT_PATH}:${PATH}
 
 # ----------------------------------------------------------------------
 
@@ -38,19 +54,6 @@ do
 	. ${aDir}/.bashrc 2>/dev/null
 	. ${aDir}/bashrc  2>/dev/null
 done
-
-# ----------------------------------------------------------------------
-
-export PATH=${ROOT_PATH}:${PATH}
-
-# ----------------------------------------------------------------------
-
-mkdir -p ${HOSTNAME_DIR} ${DOMAINNAME_DIR} ${OS_NAME_DIR} ${OS_RELEASE_NAME_DIR} ${OS_RELEASE_DIR}
-
-# ----------------------------------------------------------------------
-
-FLAG="🇺🇲"
-F=":flag_um:"
 
 # ----------------------------------------------------------------------
 
@@ -74,8 +77,6 @@ __prompt_command() {
 
 export PROMPT_COMMAND=__prompt_command
 
-#export PS1="\n\033[0;37m\][\[\033[1;34m\]\u\[\033[0;31m\]@\h \[\033[0;32m\]\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')\[\033[0;37m\]] \`pwd\`> \[\033[0m\]"
-
 export TERM=xterm-color
 
 # ----------------------------------------------------------------------
@@ -85,4 +86,3 @@ alias vi='vim -p'
 alias vim='vim -p'
 
 # ----------------------------------------------------------------------
-

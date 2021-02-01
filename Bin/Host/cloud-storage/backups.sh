@@ -19,31 +19,19 @@ echo "Start Date:      `date +'%F %a'`"
 
 # -----------------------------------------------------------------------------------------
 
-echo "    family-ap:"
+echo "    cloud-storage:"
 
-mkdir -p /mnt/family-ap/exports/backups/host/cloud-storage/exports
-
-echo "        /etc:                   `date +'%H:%M:%S'`"
-
-rsync -av $1 /etc /mnt/family-ap/exports/backups/host/cloud-storage/ --log-file=${LOG_FILE} $* &> /dev/null
-
-echo "        /exports:               `date +'%H:%M:%S'`"
-
-rsync -av $1 /exports /mnt/family-ap/exports/backups/host/cloud-storage/ --log-file=${LOG_FILE} $* &> /dev/null
-
-# -----------------------------------------------------------------------------------------
-
-echo "    cloud-server:"
-
-mkdir -p /mnt/cloud-server/exports/backups/host/cloud-storage/exports
+mkdir -p /exports/nas/backups/host/cloud-storage/
 
 echo "        /etc:                   `date +'%H:%M:%S'`"
 
-rsync -av $1 /etc /mnt/cloud-server/exports/backups/host/cloud-storage/ --log-file=${LOG_FILE} $* &> /dev/null
+rsync -av $1 /etc /exports/nas/backups/host/cloud-storage/ --log-file=${LOG_FILE} $* &> /dev/null
 
-echo "        /exports:               `date +'%H:%M:%S'`"
+mkdir -p /exports/nas/backups/host/cloud-storage/exports
 
-rsync -av $1 /exports /mnt/cloud-server/exports/backups/host/cloud-storage/ --log-file=${LOG_FILE} $* &> /dev/null
+echo "        /exports/home:          `date +'%H:%M:%S'`"
+
+rsync -av $1 /exports/home /exports/nas/backups/host/cloud-storage/exports --log-file=${LOG_FILE} $* &> /dev/null
 
 # -----------------------------------------------------------------------------------------
 

@@ -3,4 +3,4 @@ Name=Argo UML
 Comment=Argo UML
 Type=Application
 Icon=/home/sfloess/Tools/argouml/icon/ArgoIcon128x128.png
-Exec=/home/sfloess/Tools/argouml/argouml.sh
+Exec=/mnt/shared/common/usr/local/argouml/argouml.sh

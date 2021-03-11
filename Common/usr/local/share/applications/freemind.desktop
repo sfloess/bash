@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Freemind
+Comment=Freemind
+Categories=Office
+Type=Application
+Icon=/home/sfloess/Tools/icons/freemind.png
+Exec=/home/sfloess/Tools/freemind/freemind.sh

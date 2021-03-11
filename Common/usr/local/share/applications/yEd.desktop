@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=
+Comment=Technical Diagramming
+Comment[en]=Technical Diagramming
+Encoding=UTF-8
+Exec=java -jar /home/sfloess/Tools/yed/yed.jar
+Icon=/home/sfloess/Tools/yed/icons/yed.ico
+MimeType=
+Name=yEdit
+Name[en]=yEdit
+Path=/home/sfloess/Tools/yed
+ServiceTypes=
+SwallowExec=
+SwallowTitle=
+Terminal=
+TerminalOptions=
+Type=Application
+URL=

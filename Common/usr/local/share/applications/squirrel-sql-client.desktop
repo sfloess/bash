@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=SQuirreL SQL Client
+Comment=SQuirreL SQL Client
+Type=Application
+Icon=/home/sfloess/Tools/squirrelsql/icons/acorn.png
+Exec=/home/sfloess/Tools/squirrelsql/squirrel-sql.sh

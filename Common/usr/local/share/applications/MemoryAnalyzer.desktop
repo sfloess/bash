@@ -2,7 +2,7 @@
 Name=Memory Analyzer
 Comment=Memory Analyzer
 Type=Application
-Icon=/home/sfloess/Tools/icons/memory_analyzer_32.png
-Exec=/home/sfloess/Tools/mat/MemoryAnalyzer -vmargs -Xmx20g
+#Icon=/home/sfloess/Tools/icons/memory_analyzer_32.png
+Exec=/mnt/share//mat/MemoryAnalyzer -vmargs -Xmx20g
 StartupNotify=true
 Terminal=false

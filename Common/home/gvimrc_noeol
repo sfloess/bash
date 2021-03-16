@@ -36,6 +36,27 @@
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
+" :fun! WriteFileWithoutEOF()
+" :  let a=getline(1,line('$')-1)
+" :  call map(a, 'v:val . nr2char(13)')
+" :  call extend(a, getline('$', '$'))
+" :  call writefile(a,fnamemodify(@%, ':p'), 'b')
+" :  unlet a
+" :endfun
+
+:au BufWriteCmd filename :call WriteFileWithoutEOF()
+:au BufWritePre * :set binary | set noeol
+:au BufWritePost * :set nobinary | set eol
+
+:au BufWritePre * set binary noeol
+:au BufWritePost * set nobinary eol
+:au BufEnter *.bsh set syntax=java tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+:au BufEnter *.cls set syntax=apex tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+" :au BufEnter *.cls exec 'match Todo /\%>80v.\+/'
+:au BufEnter *.trigger set syntax=apex tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+" :au BufEnter *.trigger exec 'match Todo /\%>80v.\+/'
+:au BufEnter *.page set tabstop=4 shiftwidth=4 softtabstop=4 nowrap
+
 :function! TabpageName(mode)
 :    if a:mode == 1
 :        return fnamemodify(expand("%"), ":p:h")
@@ -56,5 +77,5 @@ set rtp+=~/.vim/bundle/Vundle.vim
 :    endif
 :endfunction
 
-:set guitablabel=%{TabpageName(2)}%{TabpageState()}
 
+:set guitablabel=%{TabpageName(2)}%{TabpageState()}

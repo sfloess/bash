@@ -4,7 +4,7 @@ screen -t "bedroom-ap"
 stuff "ssh root@bedroom-ap\015"
 
 screen -t "basement-ap"
-stuff "ssh -p 22222 root@basement-ap\015"
+stuff "ssh root@basement-ap\015"
 
 screen -t "cloud-ap"
 stuff "ssh root@cloud-ap\015"

@@ -2,5 +2,5 @@
 Name=Argo UML
 Comment=Argo UML
 Type=Application
-Icon=/home/sfloess/Tools/argouml/icon/ArgoIcon128x128.png
+Icon=/mnt/shared/Common/usr/local/share/argouml/icon/ArgoIcon128x128.png
 Exec=/mnt/shared/Common/usr/local/share/argouml/argouml.sh

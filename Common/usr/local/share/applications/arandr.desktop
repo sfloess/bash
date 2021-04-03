@@ -2,7 +2,7 @@
 Name=ARandR
 GenericName=Screen Settings
 GenericName[de]=Bildschirmeinstellungen
-Icon=/usr/share/icons/gnome/16x16/devices/display.png
+Icon=/usr/shared/icons/gnome/16x16/devices/display.png
 Exec=arandr
 Terminal=false
 Type=Application

@@ -3,4 +3,4 @@ Name=Postman
 Comment=Postman
 Type=Application
 Icon=/home/sfloess/Tools/Postman/app/resources/app/assets/icon.png
-Exec=/mnt/shared/Common/usr/local/Postman/app/Postman
+Exec=/mnt/shared/Common/usr/local/share/Postman/app/Postman

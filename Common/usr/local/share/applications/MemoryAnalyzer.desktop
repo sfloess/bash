@@ -3,6 +3,6 @@ Name=Memory Analyzer
 Comment=Memory Analyzer
 Type=Application
 #Icon=/home/sfloess/Tools/icons/memory_analyzer_32.png
-Exec=/mnt/share/Common/usr/local/mat/MemoryAnalyzer -vmargs -Xmx20g
+Exec=/mnt/shared/Common/usr/local/share/mat/MemoryAnalyzer -vmargs -Xmx20g
 StartupNotify=true
 Terminal=false

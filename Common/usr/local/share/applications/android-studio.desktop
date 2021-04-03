@@ -4,4 +4,4 @@ Comment=Android Studio
 Type=Application
 Categories=Development;IDE;
 Icon=/home/sfloess/Tools/android-studio/bin/studio.png
-Exec=/mnt/shared/common/usr/local/android-studio/bin/studio.sh
+Exec=/mnt/shared/Common/usr/local/android-studio/bin/studio.sh

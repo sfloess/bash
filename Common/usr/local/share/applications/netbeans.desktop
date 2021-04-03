@@ -4,4 +4,4 @@ Comment=Netbeans
 Type=Application
 Categories=Development;IDE;
 Icon=/home/sfloess/Tools/netbeans/nb/netbeans.png
-Exec=/mnt/shared/common/usr/local/netbeans/bin/netbeans
+Exec=/mnt/shared/Common/usr/local/netbeans/bin/netbeans

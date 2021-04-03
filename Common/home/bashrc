@@ -159,3 +159,8 @@ export FLOSSWARE_SCREENRC_FILE="${CONFIG_ETC_HOME}/flossware.screenrc"
 alias flossware-screen="screen -S flossware -c ${FLOSSWARE_SCREENRC_FILE}"
 
 # ------------------------------------------------------------
+
+mkdir -p ~/.vimbak  ~/.vimswp
+
+# ------------------------------------------------------------
+

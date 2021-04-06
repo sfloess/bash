@@ -2,5 +2,5 @@
 Name=JMeter
 Comment=JMeter
 Type=Application
-Icon=/home/sfloess/Tools/apache-jmeter/bin/report-template/content/pages/icon-apache.png
+Icon=/mnt/shared/Common/usr/local/share/icons/icon-apache.png
 Exec=/mnt/shared/Common/usr/local/share/apache-jmeter/bin/jmeter

@@ -2,5 +2,5 @@
 Name=SQuirreL SQL Client
 Comment=SQuirreL SQL Client
 Type=Application
-Icon=/home/sfloess/Tools/squirrelsql/icons/acorn.png
+Icon=/mnt/shared/Common/usr/local/share/icons/acorn.png
 Exec=/mnt/shared/Common/usr/local/share/squirrelsql/squirrel-sql.sh

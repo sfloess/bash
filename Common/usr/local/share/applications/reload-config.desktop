@@ -5,5 +5,5 @@ Comment=Reload LXDE Config
 Type=Application
 Terminal=false
 Exec=lxpanelctl restart && openbox --restart
-Icon=/home/sfloess/Tools/icons/reload.png
+Icon=/mnt/shared/Common/usr/local/share/icons/reload.png
 Categories=ConsoleOnly;System;

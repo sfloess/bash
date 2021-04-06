@@ -3,6 +3,5 @@ Name=Freemind
 Comment=Freemind
 Categories=Office
 Type=Application
-Icon=/home/sfloess/Tools/icons/freemind.png
-Exec=/mnt/shared/Common/usr/local/share/icons/freemind.png
+Icon=/mnt/shared/Common/usr/local/share/icons/freemind.png
 Exec=/mnt/shared/Common/usr/local/share/freemind/freemind.sh

@@ -27,7 +27,8 @@ __compute_circle() {
 }
 
 __compute_git_info() {
-    local GIT_INFO="`git remote 2> /dev/null | tr -s '\n' '/' | rev | cut -c2- | rev` `git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1/'`"
+    #local GIT_INFO="`git remote 2> /dev/null | tr -s '\n' '/' | rev | cut -c2- | rev` `git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1/'`"
+    local GIT_INFO="`git remote 2> /dev/null | tr -s '\n' '/' | cut -f 1 -d '/'` `git branch 2> /dev/null | grep -e '\*' | cut -f 2 -d ' '`"
 
     if [ "${GIT_INFO}" != " " ]
     then

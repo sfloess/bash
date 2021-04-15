@@ -24,7 +24,7 @@ stuff "ssh root@pi-02\015"
 screen -t "app-server"
 stuff "ssh root@app-server\015"
 
-screen -t "workstation"
-stuff "ssh root@workstation\015"
+screen -t "redhat-workstation"
+stuff "ssh root@redhat-workstation\015"
 
 source screenrc

@@ -6,14 +6,14 @@ stuff "ssh root@bedroom-ap\015"
 screen -t "basement-ap"
 stuff "ssh root@basement-ap\015"
 
-screen -t "cloud-ap"
-stuff "ssh root@cloud-ap\015"
+screen -t "server-ap"
+stuff "ssh root@server-ap\015"
 
 screen -t "desktop-ap"
 stuff "ssh root@desktop-ap\015"
 
-screen -t "cloud-server"
-stuff "ssh root@cloud-server\015"
+screen -t "storage"
+stuff "ssh root@storage\015"
 
 screen -t "pi-01"
 stuff "ssh root@pi-01\015"
@@ -21,8 +21,8 @@ stuff "ssh root@pi-01\015"
 screen -t "pi-02"
 stuff "ssh root@pi-02\015"
 
-screen -t "app-server"
-stuff "ssh root@app-server\015"
+screen -t "server-01"
+stuff "ssh root@server-01\015"
 
 screen -t "redhat-workstation"
 stuff "ssh root@redhat-workstation\015"

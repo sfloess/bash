@@ -6,7 +6,8 @@ echo "`date`  Running mega-cmd-server [$1]"
 
 start() {
     echo "`date`  Starting mega-cmd-server"
-    rm -rf ~/.megaCmd/*db*
+    cd /root
+    rm -rf /root/.megaCmd/*db*
     /usr/local/bin/mega-sync &
 }
 
@@ -14,7 +15,7 @@ stop() {
     echo "`date`  Stopping mega-cmd-server"
     /usr/bin/pkill mega-sync
     /usr/bin/pkill mega-cmd-server
-    rm -rf ~/.megaCmd/*db*
+    rm -rf /root/.megaCmd/*db*
 }
 
 restart() {

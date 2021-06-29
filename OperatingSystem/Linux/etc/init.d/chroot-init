@@ -1,0 +1,29 @@
+#!/bin/bash
+
+stop() {
+    echo "Stopping..."
+}
+
+start() {
+    echo "Starting..."
+
+    /sbin/sysctl -p
+}
+
+restart() {
+    stop
+    start
+}
+
+case $1 in
+    stop)
+        stop
+        ;;
+    start)
+        start
+        ;;
+    restart)
+        restart
+        ;;
+esac
+

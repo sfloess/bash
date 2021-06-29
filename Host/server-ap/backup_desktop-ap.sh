@@ -23,7 +23,7 @@ echo "    desktop-ap -> storage-ap:"
 
 mkdir -p /exports/backups/remote/host/desktop-ap
 
-echo "        /etc:                        `date +'%H:%M:%S'`"
+echo "        /etc:                   `date +'%H:%M:%S'`"
 rsync -av $1 desktop-ap:/etc /exports/backups/remote/host/desktop-ap/ --log-file=${LOG_FILE} $* &> /dev/null
 
 mkdir -p /exports/backups/local/host/desktop-ap/exports

@@ -25,7 +25,7 @@ mkdir -p /exports/media
 
 echo "        /exports/media:         `date +'%H:%M:%S'`"
 
-rsync -av $1 desktop-ap:/exports/media /exports/ --log-file=${LOG_FILE} $* &> /dev/null
+rsync -av $1 --exclude Videos desktop-ap:/exports/media /exports/ --log-file=${LOG_FILE} $* &> /dev/null
 
 # -----------------------------------------------------------------------------------------
 

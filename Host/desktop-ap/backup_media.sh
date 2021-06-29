@@ -21,11 +21,11 @@ echo "Start Date:      `date +'%F %a'`"
 
 echo "    desktop-ap -> storage-ap:"
 
-mkdir -p /exports/media
+ssh storage mkdir -p /exports/backups/host/server-ap
 
 echo "        /exports/media:         `date +'%H:%M:%S'`"
 
-rsync -av $1 /exports/media storage:/exports/ --log-file=${LOG_FILE} $* &> /dev/null
+rsync -av $1 /exports/media storage:/exports/backups/host/server-ap/ --log-file=${LOG_FILE} $* &> /dev/null
 
 # -----------------------------------------------------------------------------------------
 

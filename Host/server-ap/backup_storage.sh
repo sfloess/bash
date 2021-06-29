@@ -21,17 +21,17 @@ echo "Start Date:      `date +'%F %a'`"
 
 echo "    storage -> server-ap:"
 
-mkdir -p /exports/backups/remote/host/cloud-storage/
+mkdir -p /exports/backups/remote/host/storage/
 
 echo "        /etc:                   `date +'%H:%M:%S'`"
 
-rsync -av $1 storage:/etc /exports/backups/remote/host/cloud-storage/ --log-file=${LOG_FILE} $* &> /dev/null
+rsync -av $1 storage:/etc /exports/backups/remote/host/storage/ --log-file=${LOG_FILE} $* &> /dev/null
 
-mkdir -p /exports/backups/remote/host/cloud-storage/exports
+mkdir -p /exports/backups/remote/host/storage/exports
 
 echo "        /exports/home:          `date +'%H:%M:%S'`"
 
-rsync -av $1 storage:/exports/home /exports/backups/remote/host/cloud-storage/exports --log-file=${LOG_FILE} $* &> /dev/null
+rsync -av $1 storage:/exports/home /exports/backups/remote/host/storage/exports --log-file=${LOG_FILE} $* &> /dev/null
 
 # -----------------------------------------------------------------------------------------
 

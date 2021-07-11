@@ -1,6 +1,13 @@
 #!/bin/bash
 
-#rsync -av --delete --exclude .git `dirname ${BASH_SOURCE[0]}`/* bedroom-ap:/opt/exports/FlossWare/public/
+if [ `hostname` -eq "admin-ap" ]
+then
+    RESULT_DIR=/opt/exports/FlossWare/public
+else
+    RESULT_DIR=/exports/FlossWare/public
+fi
 
-mkdir -p /opt/exports/FlossWare/public
-rsync -av --delete --exclude .git `dirname ${BASH_SOURCE[0]}`/* /opt/exports/FlossWare/public/
+mkdir -p ${RESULT_DIR}
+
+rsync -av --delete --exclude .git `dirname ${BASH_SOURCE[0]}`/* ${RESULT_DIR}/
+

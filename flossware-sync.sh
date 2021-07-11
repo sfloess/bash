@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ `hostname` -eq "admin-ap" ]
+if [ "`hostname`" = "admin-ap" ]
 then
-    RESULT_DIR=/opt/exports/FlossWare/public
-else
     RESULT_DIR=/exports/FlossWare/public
+else
+    RESULT_DIR=/opt/exports/FlossWare/public
 fi
 
 mkdir -p ${RESULT_DIR}
